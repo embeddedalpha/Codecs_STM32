@@ -1,0 +1,15 @@
+../Drivers/I2C/I2C.c:15:13:pin_setup	40	static
+../Drivers/I2C/I2C.c:38:6:I2C_Clock_Enable	16	static
+../Drivers/I2C/I2C.c:54:6:I2C_Clock_Disable	16	static
+../Drivers/I2C/I2C.c:70:6:I2C_Reset	16	static
+../Drivers/I2C/I2C.c:78:6:I2C_Init	16	static
+../Drivers/I2C/I2C.c:133:8:I2C_Master_Start	24	static
+../Drivers/I2C/I2C.c:149:6:I2C_Master_Address	24	static
+../Drivers/I2C/I2C.c:166:6:I2C_Master_Send_Byte	16	static
+../Drivers/I2C/I2C.c:173:5:I2C_Master_Receive_Byte	24	static
+../Drivers/I2C/I2C.c:184:6:I2C_Master_Send_Buffer	32	static
+../Drivers/I2C/I2C.c:202:6:I2C_Master_NACK	16	static
+../Drivers/I2C/I2C.c:207:6:I2C_Master_ACK	16	static
+../Drivers/I2C/I2C.c:212:6:I2C_Master_Stop	16	static
+../Drivers/I2C/I2C.c:218:6:I2C_Master_Write_Register	16	static
+../Drivers/I2C/I2C.c:227:5:I2C_Master_Read_Register	24	static

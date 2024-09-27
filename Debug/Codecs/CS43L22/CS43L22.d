@@ -1,0 +1,1 @@
+Codecs/CS43L22/CS43L22.o: ../Codecs/CS43L22/CS43L22.c
