@@ -45,9 +45,23 @@ uint8_t CS43L22_Init(CS43L22_Config *config)
 
 	GPIO_Pin_Init(GPIOD, 4, GPIO_Configuration.Mode.General_Purpose_Output, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.Pull_Up, GPIO_Configuration.Alternate_Functions.None);
 
+
 	GPIO_Pin_High(GPIOD, 4);
 
-	CS43L22_Deactivate(config);
+	I2C_Master_Write_Register(&config -> hardware_i2c, CS43L22_Address, 0x02, 0x01);
+
+	I2C_Master_Write_Register(&config -> hardware_i2c, CS43L22_Address, 0x00, 0x99);
+	I2C_Master_Write_Register(&config -> hardware_i2c, CS43L22_Address, 0x47, 0x80);
+
+	uint8_t retval = I2C_Master_Read_Register(&config->hardware_i2c, CS43L22_Address, 0x32);
+	retval |= 1 << 7;
+	I2C_Master_Write_Register(&config -> hardware_i2c, CS43L22_Address, 0x32, retval);
+
+	retval = I2C_Master_Read_Register(&config->hardware_i2c, CS43L22_Address, 0x32);
+	retval &= ~(1 << 7);
+	I2C_Master_Write_Register(&config -> hardware_i2c, CS43L22_Address, 0x32, retval);
+
+	I2C_Master_Write_Register(&config -> hardware_i2c, CS43L22_Address, 0x00, 0x00);
 
 	return 1;
 
