@@ -9,8 +9,8 @@
 #define I2S_H_
 
 #include "main.h"
-#include "GPIO.h"
-#include "DMA.h"
+#include "GPIO/GPIO.h"
+#include "DMA/DMA.h"
 #include "I2S_Defs.h"
 
 #define I2S_Console_Debug 0 ///< Macro for enabling console debug for I2S.

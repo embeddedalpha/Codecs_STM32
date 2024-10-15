@@ -58,10 +58,10 @@ struct I2S3_DMA_Half_Duplex
 static int8_t SCK_PIN_INIT2(I2S_Config *config)
 {
 	if((config->Full_Duplex.SCK_Pin == I2S_Pin.SCK.I2S2.PB10) || (config->Half_Duplex.SCK_Pin == I2S_Pin.SCK.I2S2.PB10)){
-		GPIO_Pin_Init(GPIOB, 10, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2);
+		GPIO_Pin_Init(GPIOB, 10, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2);
 	}
 	else if((config->Full_Duplex.SCK_Pin == I2S_Pin.SCK.I2S2.PB13) || (config->Half_Duplex.SCK_Pin == I2S_Pin.SCK.I2S2.PB13)){
-		GPIO_Pin_Init(GPIOB, 13, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2);
+		GPIO_Pin_Init(GPIOB, 13, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2);
 	}
 	else{
 		config->Error.SCK_Pin_Error = true;
@@ -72,10 +72,10 @@ static int8_t SCK_PIN_INIT2(I2S_Config *config)
 static int8_t WS_PIN_INIT2(I2S_Config *config)
 {
 	if((config->Full_Duplex.WS_Pin == I2S_Pin.WS.I2S2.PB09) || (config->Half_Duplex.WS_Pin == I2S_Pin.WS.I2S2.PB09)){
-		GPIO_Pin_Init(GPIOB, 9, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2);
+		GPIO_Pin_Init(GPIOB, 9, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2);
 	}
 	else if((config->Full_Duplex.WS_Pin == I2S_Pin.WS.I2S2.PB12) || (config->Half_Duplex.WS_Pin == I2S_Pin.WS.I2S2.PB12)){
-		GPIO_Pin_Init(GPIOB, 12, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2);
+		GPIO_Pin_Init(GPIOB, 12, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2);
 	}
 	else{
 		config->Error.WS_Pin_Error = true;
@@ -86,10 +86,10 @@ static int8_t WS_PIN_INIT2(I2S_Config *config)
 static int8_t SD_PIN_Init2(I2S_Config *config)
 {
 	if((config->Full_Duplex.SD_Pin == I2S_Pin.SD.I2S2.PB15) || (config->Half_Duplex.SD_Pin == I2S_Pin.SD.I2S2.PB15)){
-		GPIO_Pin_Init(GPIOB, 15, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.Pull_Down, Alternate_Functions.I2S_2);
+		GPIO_Pin_Init(GPIOB, 15, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.Pull_Down, GPIO_Configuration.Alternate_Functions.I2S_2);
 	}
 	else if((config->Full_Duplex.SD_Pin == I2S_Pin.SD.I2S2.PC03) || (config->Half_Duplex.SD_Pin == I2S_Pin.SD.I2S2.PC03)){
-		GPIO_Pin_Init(GPIOC, 3, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.Pull_Down, Alternate_Functions.I2S_2);
+		GPIO_Pin_Init(GPIOC, 3, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.Pull_Down, GPIO_Configuration.Alternate_Functions.I2S_2);
 	}
 	else{
 		config->Error.SD_Pin_Error = true;
@@ -102,7 +102,7 @@ static int8_t MCK_PIN_Init2(I2S_Config *config)
 	if((config->Full_Duplex.MCK_Pin != I2S_Pin.MCK.I2S2.Disable) || (config->Half_Duplex.MCK_Pin != I2S_Pin.MCK.I2S2.Disable))
 	{
 		if((config->Full_Duplex.MCK_Pin == I2S_Pin.MCK.I2S2.PC7) || (config->Half_Duplex.MCK_Pin == I2S_Pin.MCK.I2S2.PC7)){
-			GPIO_Pin_Init(GPIOC, 7, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2);
+			GPIO_Pin_Init(GPIOC, 7, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2);
 		}
 		else{
 			config->Error.MCK_PIN_Error = true;
@@ -114,10 +114,10 @@ static int8_t MCK_PIN_Init2(I2S_Config *config)
 static int8_t EXT_SD_PIN_Init2(I2S_Config *config)
 {
 	if((config->Full_Duplex.EXT_SD == I2S_Pin.EXT_SD.I2S2.PB14)){
-		GPIO_Pin_Init(GPIOB, 14, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2);
+		GPIO_Pin_Init(GPIOB, 14, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2);
 	}
 	else if(config->Full_Duplex.EXT_SD == I2S_Pin.EXT_SD.I2S2.PC02){
-		GPIO_Pin_Init(GPIOC, 2, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2);
+		GPIO_Pin_Init(GPIOC, 2, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2);
 	}
 	else{
 		config->Error.Ext_SD_Pin_Error = true;
@@ -130,10 +130,10 @@ static int8_t EXT_SD_PIN_Init2(I2S_Config *config)
 static int8_t SCK_PIN_INIT3(I2S_Config *config)
 {
 	if(config->Full_Duplex.SCK_Pin == I2S_Pin.SCK.I2S2.PB10){
-		GPIO_Pin_Init(GPIOB, 10, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2EXT);
+		GPIO_Pin_Init(GPIOB, 10, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2EXT);
 	}
 	else if(config->Full_Duplex.SCK_Pin == I2S_Pin.SCK.I2S2.PB13){
-		GPIO_Pin_Init(GPIOB, 13, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2EXT);
+		GPIO_Pin_Init(GPIOB, 13, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2EXT);
 	}
 	else{
 		config->Error.SCK_Pin_Error = true;
@@ -144,10 +144,10 @@ static int8_t SCK_PIN_INIT3(I2S_Config *config)
 static int8_t WS_PIN_INIT3(I2S_Config *config)
 {
 	if(config->Full_Duplex.WS_Pin == I2S_Pin.WS.I2S2.PB09){
-		GPIO_Pin_Init(GPIOB, 9, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2EXT);
+		GPIO_Pin_Init(GPIOB, 9, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2EXT);
 	}
 	else if(config->Full_Duplex.WS_Pin == I2S_Pin.WS.I2S2.PB12){
-		GPIO_Pin_Init(GPIOB, 12, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2EXT);
+		GPIO_Pin_Init(GPIOB, 12, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2EXT);
 	}
 	else{
 		config->Error.WS_Pin_Error = true;
@@ -158,10 +158,10 @@ static int8_t WS_PIN_INIT3(I2S_Config *config)
 static int8_t SD_PIN_Init3(I2S_Config *config)
 {
 	if(config->Full_Duplex.SD_Pin == I2S_Pin.SD.I2S2.PB15){
-		GPIO_Pin_Init(GPIOB, 15, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2EXT);
+		GPIO_Pin_Init(GPIOB, 15, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2EXT);
 	}
 	else if(config->Full_Duplex.SD_Pin == I2S_Pin.SD.I2S2.PC03){
-		GPIO_Pin_Init(GPIOC, 3, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2EXT);
+		GPIO_Pin_Init(GPIOC, 3, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2EXT);
 	}
 	else{
 		config->Error.SD_Pin_Error = true;
@@ -174,7 +174,7 @@ static int8_t MCK_PIN_Init3(I2S_Config *config)
 	if(config->Full_Duplex.MCK_Pin != I2S_Pin.MCK.I2S2.Disable)
 	{
 		if((config->Full_Duplex.MCK_Pin == I2S_Pin.MCK.I2S2.PC7)){
-			GPIO_Pin_Init(GPIOC, 7, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2);
+			GPIO_Pin_Init(GPIOC, 7, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2);
 		}
 		else{
 			config->Error.MCK_PIN_Error = true;
@@ -186,10 +186,10 @@ static int8_t MCK_PIN_Init3(I2S_Config *config)
 static int8_t EXT_SD_PIN_Init3(I2S_Config *config)
 {
 	if(config->Full_Duplex.EXT_SD == I2S_Pin.EXT_SD.I2S2.PB14){
-		GPIO_Pin_Init(GPIOB, 14, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2EXT);
+		GPIO_Pin_Init(GPIOB, 14, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2EXT);
 	}
 	else if(config->Full_Duplex.EXT_SD == I2S_Pin.EXT_SD.I2S2.PC02){
-		GPIO_Pin_Init(GPIOC, 2, MODE.Alternate_Function, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.I2S_2EXT);
+		GPIO_Pin_Init(GPIOC, 2, GPIO_Configuration.Mode.Alternate_Function, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.I2S_2EXT);
 	}
 	else{
 		config->Error.Ext_SD_Pin_Error = true;
@@ -273,7 +273,7 @@ int8_t I2S_Init(I2S_Config *config)
 		config->Error.Port_Error = true;
 	}
 
-	GPIO_Pin_Init(config->LR_Pin_Port, config->LR_Pin_Number, MODE.General_Purpose_Output, Output_Type.Push_Pull, Speed.Very_High_Speed, Pull.No_Pull_Up_Down, Alternate_Functions.None);
+	GPIO_Pin_Init(config->LR_Pin_Port, config->LR_Pin_Number, GPIO_Configuration.Mode.General_Purpose_Output, GPIO_Configuration.Output_Type.Push_Pull, GPIO_Configuration.Speed.Very_High_Speed, GPIO_Configuration.Pull.No_Pull_Up_Down, GPIO_Configuration.Alternate_Functions.None);
 
 
 	config->Port->I2SCFGR &= ~SPI_I2SCFGR_I2SMOD;
@@ -502,49 +502,45 @@ int8_t I2S_Mode_Set(I2S_Config *config)
 		{
 			if((config->Full_Duplex.mode == I2S_Mode.Master.Receive) || config->Full_Duplex.mode == I2S_Mode.Slave.Receive)
 			{
-				I2S2_DMA_Full_Duplex.Receiver.RX.channel = 0;
-				I2S2_DMA_Full_Duplex.Receiver.RX.stream = DMA1_Stream3;
-				I2S2_DMA_Full_Duplex.Receiver.RX.circular_mode = DMA_Circular_Mode.Disable;
-				I2S2_DMA_Full_Duplex.Receiver.RX.controller = DMA1;
-				I2S2_DMA_Full_Duplex.Receiver.RX.flow_control = DMA_Flow_Control.DMA_Control;
-				I2S2_DMA_Full_Duplex.Receiver.RX.interrupts = DMA_Interrupts.Half_Transfer_Complete | DMA_Interrupts.Transfer_Complete;
+				I2S2_DMA_Full_Duplex.Receiver.RX.Request = DMA_Configuration.Request.I2S2_RX;
+				I2S2_DMA_Full_Duplex.Receiver.RX.circular_mode = DMA_Configuration.Circular_Mode.Disable;
+				I2S2_DMA_Full_Duplex.Receiver.RX.flow_control =  DMA_Configuration.Flow_Control.DMA_Control;
+				I2S2_DMA_Full_Duplex.Receiver.RX.interrupts = DMA_Configuration.DMA_Interrupts.Half_Transfer_Complete | DMA_Configuration.DMA_Interrupts.Transfer_Complete;
 				if(config->Data_Length == I2S_Data_Length._16_bit)
 				{
-					I2S2_DMA_Full_Duplex.Receiver.RX.memory_data_size = DMA_Memory_Data_Size.half_word;
-					I2S2_DMA_Full_Duplex.Receiver.RX.peripheral_data_size = DMA_Peripheral_Data_Size.half_word;
+					I2S2_DMA_Full_Duplex.Receiver.RX.memory_data_size = DMA_Configuration.Memory_Data_Size.half_word;
+					I2S2_DMA_Full_Duplex.Receiver.RX.peripheral_data_size = DMA_Configuration.Peripheral_Data_Size.half_word;
 				}
 				else if((config->Data_Length == I2S_Data_Length._24_bit) || (config->Data_Length == I2S_Data_Length._32_bit))
 				{
-					I2S2_DMA_Full_Duplex.Receiver.RX.memory_data_size = DMA_Memory_Data_Size.word;
-					I2S2_DMA_Full_Duplex.Receiver.RX.peripheral_data_size = DMA_Peripheral_Data_Size.word;
+					I2S2_DMA_Full_Duplex.Receiver.RX.memory_data_size = DMA_Configuration.Memory_Data_Size.word;
+					I2S2_DMA_Full_Duplex.Receiver.RX.peripheral_data_size = DMA_Configuration.Peripheral_Data_Size.word;
 				}
-				I2S2_DMA_Full_Duplex.Receiver.RX.peripheral_pointer_increment = DMA_Peripheral_Pointer_Incremet.Disable;
-				I2S2_DMA_Full_Duplex.Receiver.RX.memory_pointer_increment = DMA_Memory_Pointer_Incremet.Enable;
-				I2S2_DMA_Full_Duplex.Receiver.RX.transfer_direction = DMA_Transfer_Direction.Peripheral_to_memory;
+				I2S2_DMA_Full_Duplex.Receiver.RX.peripheral_pointer_increment = DMA_Configuration.Peripheral_Pointer_Increment.Disable;
+				I2S2_DMA_Full_Duplex.Receiver.RX.memory_pointer_increment = DMA_Configuration.Memory_Pointer_Increment.Enable;
+				I2S2_DMA_Full_Duplex.Receiver.RX.transfer_direction = DMA_Configuration.Transfer_Direction.Peripheral_to_memory;
 
 				DMA_Init(&I2S2_DMA_Full_Duplex.Receiver.RX);
 
 /*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 
-				I2S2_DMA_Full_Duplex.Receiver.TX.channel = 2;
-				I2S2_DMA_Full_Duplex.Receiver.TX.stream = DMA1_Stream4;
-				I2S2_DMA_Full_Duplex.Receiver.TX.circular_mode = DMA_Circular_Mode.Disable;
-				I2S2_DMA_Full_Duplex.Receiver.TX.controller = DMA1;
-				I2S2_DMA_Full_Duplex.Receiver.TX.flow_control = DMA_Flow_Control.DMA_Control;
-				I2S2_DMA_Full_Duplex.Receiver.TX.interrupts = DMA_Interrupts.Half_Transfer_Complete | DMA_Interrupts.Transfer_Complete;
+				I2S2_DMA_Full_Duplex.Receiver.RX.Request = DMA_Configuration.Request.I2S2_TX;
+				I2S2_DMA_Full_Duplex.Receiver.TX.circular_mode = DMA_Configuration.Circular_Mode.Disable;
+				I2S2_DMA_Full_Duplex.Receiver.TX.flow_control = DMA_Configuration.Flow_Control.DMA_Control;
+				I2S2_DMA_Full_Duplex.Receiver.TX.interrupts = DMA_Configuration.DMA_Interrupts.Half_Transfer_Complete | DMA_Configuration.DMA_Interrupts.Transfer_Complete;
 				if(config->Data_Length == I2S_Data_Length._16_bit)
 				{
-					I2S2_DMA_Full_Duplex.Receiver.TX.memory_data_size = DMA_Memory_Data_Size.half_word;
-					I2S2_DMA_Full_Duplex.Receiver.TX.peripheral_data_size = DMA_Peripheral_Data_Size.half_word;
+					I2S2_DMA_Full_Duplex.Receiver.TX.memory_data_size = DMA_Configuration.Memory_Data_Size.half_word;
+					I2S2_DMA_Full_Duplex.Receiver.TX.peripheral_data_size = DMA_Configuration.Peripheral_Data_Size.half_word;
 				}
 				else if((config->Data_Length == I2S_Data_Length._24_bit) || (config->Data_Length == I2S_Data_Length._32_bit))
 				{
-					I2S2_DMA_Full_Duplex.Receiver.TX.memory_data_size = DMA_Memory_Data_Size.word;
-					I2S2_DMA_Full_Duplex.Receiver.TX.peripheral_data_size = DMA_Peripheral_Data_Size.word;
+					I2S2_DMA_Full_Duplex.Receiver.TX.memory_data_size = DMA_Configuration.Memory_Data_Size.word;
+					I2S2_DMA_Full_Duplex.Receiver.TX.peripheral_data_size = DMA_Configuration.Peripheral_Data_Size.word;
 				}
-				I2S2_DMA_Full_Duplex.Receiver.TX.peripheral_pointer_increment = DMA_Peripheral_Pointer_Incremet.Disable;
-				I2S2_DMA_Full_Duplex.Receiver.TX.memory_pointer_increment = DMA_Memory_Pointer_Incremet.Enable;
-				I2S2_DMA_Full_Duplex.Receiver.TX.transfer_direction = DMA_Transfer_Direction.Memory_to_peripheral;
+				I2S2_DMA_Full_Duplex.Receiver.TX.peripheral_pointer_increment = DMA_Configuration.Peripheral_Pointer_Increment.Disable;
+				I2S2_DMA_Full_Duplex.Receiver.TX.memory_pointer_increment = DMA_Configuration.Memory_Pointer_Increment.Enable;
+				I2S2_DMA_Full_Duplex.Receiver.TX.transfer_direction = DMA_Configuration.Transfer_Direction.Memory_to_peripheral;
 				DMA_Init(&I2S2_DMA_Full_Duplex.Receiver.TX);
 			}
 
@@ -741,7 +737,7 @@ void I2S_Write_Data(I2S_Config *config, uint32_t data, int len)
 		config -> Port -> DR = (0x00FF0000 & data)>>16;
 		config -> Port -> DR = (0x0000FFFF & data);
 	}
-	else if(config->Channel_Length == I2S_Data_Length._24_bit)
+	else if(config->Channel_Length == I2S_Data_Length._32_bit)
 	{
 		config -> Port -> DR = (0xFFFF0000 & data)>>16;
 		config -> Port -> DR = (0x0000FFFF & data);
