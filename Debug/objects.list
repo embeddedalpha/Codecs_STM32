@@ -4,6 +4,7 @@
 "./Drivers/DMA/DMA.o"
 "./Drivers/GPIO/GPIO.o"
 "./Drivers/I2C/I2C.o"
+"./Drivers/I2S/I2S.o"
 "./Drivers/USART/USART.o"
 "./Src/main.o"
 "./Src/syscalls.o"

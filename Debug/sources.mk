@@ -28,6 +28,7 @@ Drivers/Console \
 Drivers/DMA \
 Drivers/GPIO \
 Drivers/I2C \
+Drivers/I2S \
 Drivers/USART \
 Src \
 Startup \
